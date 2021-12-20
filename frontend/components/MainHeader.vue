@@ -2,19 +2,18 @@
   <header>
     <div class="center">
       <nav>
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/cases">Storage</nuxt-link>
-        <nuxt-link to="/signup">Sign up</nuxt-link>
-        <nuxt-link to="/signin">Sign in</nuxt-link>
-        <nuxt-link to="/info">Information</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
+        <nuxt-link to="/users">Users</nuxt-link>
+        <nuxt-link to="/orders">Orders</nuxt-link>
+        <nuxt-link to="/transactions">Transactions</nuxt-link>
+        <nuxt-link to="/reviews">Reviews</nuxt-link>
+        <!-- <nuxt-link to="/about">About</nuxt-link> -->
+        <!-- <nuxt-link to="/signup">Sign up</nuxt-link>
+        <nuxt-link to="/signin">Sign in</nuxt-link> -->
       </nav>
-      <div class="header_contacts">
-        <div class="header_contacts--name">Zero Trust</div>
-        <div class="header_contacts--info">
+      <div class="header_contacts pr-5">
+        <div class="m-auto text-2xl text-white">Carsharing service</div>
+        <div class="flex justify-around m-auto text-sm">
           <div>User recognition via mouse tracking</div>
-          <!-- <a href="tel:79129125246">+7 912 912-52-46</a>
-          <a href="mailto:email@emal.com" target="_blank">email@emal.com</a> -->
         </div>
       </div>
     </div>
@@ -27,7 +26,7 @@ export default {};
 
 <style>
 header {
-  background-color: #9370DB;
+  background-color: #c4b5fd;
 }
 nav a {
   padding: 20px;
@@ -37,10 +36,10 @@ nav a {
   line-height: 1em;
 }
 nav a:hover {
-  color: rgb(76, 126, 126);
+  color: rgb(0, 0, 0);
 }
 nav a.nuxt-link-exact-active {
-  color:#000080;
+  color: rgb(0, 0, 0);
 }
 nav {
   display: flex;
@@ -57,21 +56,6 @@ nav {
   flex-direction: column;
   font-weight: 500;
   line-height: 1em;
-  padding: 4px 0px;
   box-sizing: border-box;
-}
-.header_contacts--name {
-  color: #ffffff;
-  margin: auto;
-  font-size: 25px;
-}
-.header_contacts--info {
-  margin: auto 0;
-  font-size: 14px;
-  display: flex;
-  justify-content: space-around;
-}
-.header_contacts--info div {
-  color: #000080;
 }
 </style>

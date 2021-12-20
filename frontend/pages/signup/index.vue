@@ -59,7 +59,6 @@
         <button type="submit" class="registerbtn">Register</button>
       </div>
     </form>
-    </div>
   </div>
 </template>
 
@@ -70,7 +69,7 @@ export default {
   head() {
     return {
       title: "Sign up",
-      meta: [{ hid: "description", name: "description", content: "Test desc" }]
+      meta: [{ hid: "description", name: "description", content: "Test desc" }],
     };
   },
   data: () => ({
@@ -81,7 +80,7 @@ export default {
     first_name: "",
     second_name: "",
     count: 0,
-    formData: null
+    formData: null,
   }),
   methods: {
     signIn() {},
@@ -89,29 +88,29 @@ export default {
       const formData = this.formData;
       const audioChunks = this.audioChunks;
       const recordAudio = () =>
-        new Promise(async resolve => {
+        new Promise(async (resolve) => {
           const stream = await navigator.mediaDevices.getUserMedia({
             audio: true,
-            video: false
+            video: false,
           });
           const mediaRecorder = new MediaRecorder(stream);
 
-          mediaRecorder.addEventListener("dataavailable", event => {
+          mediaRecorder.addEventListener("dataavailable", (event) => {
             audioChunks.push(event.data);
           });
 
           const start = () => mediaRecorder.start();
 
           const stop = () =>
-            new Promise(resolve => {
+            new Promise((resolve) => {
               mediaRecorder.addEventListener("stop", () => {
                 const audioBlob = new Blob(audioChunks, {
-                  type: "audio/wav; codecs=opus"
+                  type: "audio/wav; codecs=opus",
                 });
                 this.audioChunks = [];
                 const voice = new File([audioBlob], `voice${this.count}.wav`, {
                   lastModified: new Date(),
-                  type: "audio/wav; codecs=opus"
+                  type: "audio/wav; codecs=opus",
                 });
                 formData.append(`audio${this.count}`, voice);
                 formData.append(`first_name`, this.first_name);
@@ -124,18 +123,22 @@ export default {
                     url: "https://192.168.137.1:5000/signup",
                     data: formData,
                     headers: {
-                      "content-type": "multipart/form-data;"
-                    }
+                      "content-type": "multipart/form-data;",
+                    },
                   })
-                    .then(response => {if (response.data === "Ok") {
-                      alert("Вы успешно зарегистрированы.")
-                    } else if (response.data === 1) {
-                      alert("Пользователь с данным email-адресом уже зарегистрирован.")
-                    } else {
-                      alert("Произошла ошибка.");
-                      console.log(response);
-                    }})
-                    .catch(error => console.log(error));
+                    .then((response) => {
+                      if (response.data === "Ok") {
+                        alert("Вы успешно зарегистрированы.");
+                      } else if (response.data === 1) {
+                        alert(
+                          "Пользователь с данным email-адресом уже зарегистрирован."
+                        );
+                      } else {
+                        alert("Произошла ошибка.");
+                        console.log(response);
+                      }
+                    })
+                    .catch((error) => console.log(error));
                 }
 
                 // const audioUrl = URL.createObjectURL(audioBlob);
@@ -159,7 +162,8 @@ export default {
           resolve({ start, stop });
         });
 
-      const sleep = time => new Promise(resolve => setTimeout(resolve, time));
+      const sleep = (time) =>
+        new Promise((resolve) => setTimeout(resolve, time));
       const actionButton = document.getElementById("action");
       this.count += 1;
 
@@ -174,12 +178,12 @@ export default {
         alert(`Спасибо, запись звука ${this.count} завершена`);
         actionButton.disabled = false;
       }
-    }
+    },
   },
   mounted() {
     const formData = new FormData();
     this.formData = formData;
-  }
+  },
 };
 </script>
 
@@ -192,12 +196,12 @@ export default {
   display: flex;
   padding-left: 120px;
 }
-.container {
+/* .container {
   width: 500px;
   padding: 20px;
-  /* display: inline-block; */
-  /* align-items: justify; */
-}
+  display: inline-block;
+  align-items: justify;
+} */
 .signup_generated {
   padding-top: 23px;
   padding-left: 50px;
