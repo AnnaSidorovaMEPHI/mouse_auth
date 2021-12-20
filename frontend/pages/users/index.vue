@@ -713,16 +713,18 @@ export default {
         },
       })
         .then((response) => {
+          ref.formData = new FormData();
+          ref.mouseAccelerations = {};
+          ref.mouseSpeeds = {};
+          ref.angularCharacteristics = {};
+          ref.curvatureDistances = {};
+          ref.timeNotOnPage = 0;
+          ref.timeOnPage = 0;
+
           if (response.data === "True") {
             // alert("Send user`s data to server");
             console.log("Send user`s data to server!!!");
-            ref.formData = new FormData();
-            ref.mouseAccelerations = {};
-            ref.mouseSpeeds = {};
-            ref.angularCharacteristics = {};
-            ref.curvatureDistances = {};
-            ref.timeNotOnPage = 0;
-            ref.timeOnPage = 0;
+            console.log(response);
           } else {
             // alert("Something wrong, check console!");
             console.log("Something wrong, check console!");
