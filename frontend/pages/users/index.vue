@@ -494,7 +494,7 @@ export default {
     setGet: function (slug) {
       axios({
         method: "GET",
-        url: "https://192.168.0.17:5000/",
+        url: "https://192.168.0.16:5000/",
         params: {
           slug: slug,
         },
@@ -563,8 +563,8 @@ export default {
       if (
         e.pageX >= docsOffset.left &&
         e.pageX <= docsOffset.left + docsOffset.width &&
-        e.pageY >= docsOffset.top &&
-        e.pageY <= docsOffset.top + docsOffset.height
+        e.pageY >= docsOffset.bottom &&
+        e.pageY <= docsOffset.bottom + docsOffset.height
       ) {
         ref.onCriticalArea[now] = true;
       } else {
@@ -736,7 +736,7 @@ export default {
 
       axios({
         method: "POST",
-        url: "https://192.168.0.17:5000/",
+        url: "https://192.168.0.16:5000/",
         data: ref.formData,
         headers: {
           "content-type": "multipart/form-data;",

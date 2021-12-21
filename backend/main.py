@@ -83,12 +83,28 @@ def get_features():
     if cosines:
         print("cosines_mean =",np.array(cosines).mean())
 
+    # preparation of curvature_distances
+    row_data["curvature_distances"] = json.loads(row_data["curvature_distances"][0])
+    cur_distances = []
+    for timestamp in row_data["curvature_distances"].keys():
+        cur_dis = row_data["curvature_distances"][timestamp]["curDis"]
+        if cur_dis:
+            cur_distances.append(cur_dis)
+    if cur_distances:
+        print("curvature_distances_mean =",np.array(cur_distances).mean())
+
+    # print(row_data["on_critical_area"])
+    row_data["on_critical_area"] = json.loads(row_data["on_critical_area"][0]).values()
+    on_area = list(row_data["on_critical_area"]).count(True)
+    all_points = len(list(row_data["on_critical_area"]))
+    if all_points:
+        print(row_data["on_critical_area"])
+        print("critical_area_frequency =", on_area/all_points, on_area, all_points)
 
     if row_data:
         return "True"    
     else:
         return "False"
-
 
 if __name__ == "__main__":
     context = ('../frontend/server.crt', '../frontend/server.key')
