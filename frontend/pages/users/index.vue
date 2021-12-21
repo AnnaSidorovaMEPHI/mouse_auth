@@ -204,7 +204,7 @@
               set the status to "Verified".
             </p>
             <div class="bg-white shadow-md rounded my-6">
-              <table class="text-left w-full border-collapse">
+              <table class="text-left w-full border-collapse" id="documents">
                 <!--Border collapse doesn't work on this site yet but it's available in newer tailwind versions -->
                 <thead>
                   <tr>
@@ -333,32 +333,32 @@ export default {
         order: "#996521",
       },
       {
-        id: "1029311",
-        time: "12:50",
-        date: "30 august",
+        id: "929321",
+        time: "19:37",
+        date: "25 august",
         operation: "payment",
         source: "bonus",
-        total: "1402 rub",
+        total: "505 rub",
         card: "",
         order: "#896431",
       },
       {
-        id: "1029310",
-        time: "12:50",
-        date: "30 august",
+        id: "912837",
+        time: "07:50",
+        date: "18 august",
         operation: "payment",
-        source: "bonus",
-        total: "1402 rub",
-        card: "",
+        source: "card",
+        total: "2020 rub",
+        card: "VISA 7622",
         order: "#746411",
       },
       {
-        id: "1029309",
+        id: "909309",
         time: "12:50",
-        date: "30 august",
+        date: "16 august",
         operation: "payment",
         source: "card",
-        total: "1402 rub",
+        total: "106 rub",
         card: "VISA 7622",
         order: "#711234",
       },
@@ -375,95 +375,89 @@ export default {
         role: "Client",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
+        image: require(`~/static/img/free-icon-student-4472500.png`),
+        name: "Brown Green",
+        email: "brown.green@example.com",
+        position: "Project Manager",
+        sphere: "Oracle",
+        status: "Verified",
+        role: "Client",
+      },
+      {
+        image: require(`~/static/img/free-icon-teenager-4472497.png`),
+        name: "Purple White",
+        email: "purple.white@example.com",
+        position: "Software Engineer",
         sphere: "Bank",
         status: "Verified",
         role: "Client",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
+        image: require(`~/static/img/free-icon-teenager-4472485.png`),
+        name: "Yellow Black",
+        email: "yellow.black@example.com",
+        position: "Consultant",
+        sphere: "Google",
         status: "Verified",
         role: "Client",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
+        image: require(`~/static/img/free-icon-teenager-4472494.png`),
+        name: "Pinky Green",
+        email: "pinky.green@example.com",
         position: "Sales Manager",
-        sphere: "Bank",
+        sphere: "Network Service",
         status: "Verified",
         role: "Client",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
+        image: require(`~/static/img/free-icon-teenager-4472485.png`),
+        name: "Redly Blue",
+        email: "redly.blue@example.com",
+        position: "Car Mechanic",
+        sphere: "Auto Service",
         status: "Verified",
         role: "Client",
       },
       {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
+        image: require(`~/static/img/free-icon-teenager-4472485.png`),
+        name: "Browny Black",
+        email: "browny.black@example.com",
+        position: "DevOps Engineer",
+        sphere: "Oracle",
         status: "Verified",
         role: "Client",
       },
-      {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
-        status: "Verified",
-        role: "Client",
-      },
-      {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
-        status: "Verified",
-        role: "Client",
-      },
-      {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
-        status: "Verified",
-        role: "Client",
-      },
-      {
-        image:
-          "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
-        name: "Jane Cooper",
-        email: "jane.cooper@example.com",
-        position: "Sales Manager",
-        sphere: "Bank",
-        status: "Verified",
-        role: "Client",
-      },
+      // {
+      //   image:
+      //     "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      //   name: "Jane Cooper",
+      //   email: "jane.cooper@example.com",
+      //   position: "Sales Manager",
+      //   sphere: "Bank",
+      //   status: "Verified",
+      //   role: "Client",
+      // },
+      // {
+      //   image:
+      //     "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      //   name: "Jane Cooper",
+      //   email: "jane.cooper@example.com",
+      //   position: "Sales Manager",
+      //   sphere: "Bank",
+      //   status: "Verified",
+      //   role: "Client",
+      // },
+      // {
+      //   image:
+      //     "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4&w=256&h=256&q=60",
+      //   name: "Jane Cooper",
+      //   email: "jane.cooper@example.com",
+      //   position: "Sales Manager",
+      //   sphere: "Bank",
+      //   status: "Verified",
+      //   role: "Client",
+      // },
     ],
     documents: [
       "Cooper_passport.pdf",
@@ -492,14 +486,15 @@ export default {
     lastMouseX: null, // last mouse position x
     lastMouseY: null, // last mouse position y
     counter: 0, // counter
-    coordinates: {}, // coordinates for angular characteristics
-    curvatureDistances: {},
+    coordinates: {}, // object of coordinates for angular characteristics
+    curvatureDistances: {}, // object of curvature distances
+    onCriticalArea: {}, // object of critical area
   }),
   methods: {
     setGet: function (slug) {
       axios({
         method: "GET",
-        url: "https://192.168.0.16:5000/",
+        url: "https://192.168.0.17:5000/",
         params: {
           slug: slug,
         },
@@ -517,16 +512,22 @@ export default {
     ref.startDate = new Date();
     ref.clockStart = ref.startDate.getTime();
 
+    // critical areas
+
+    const docsOffset = document
+      .getElementById("documents")
+      .getBoundingClientRect();
+
     // checking user`s activity on site every second
     setInterval(() => {
       if (!document.hidden) {
         // if page is active
-        this.timeOnPage += 1; // 1 second interval (1000)
-        console.log("User is here, time: " + this.timeOnPage);
+        ref.timeOnPage += 1; // 1 second interval (1000)
+        console.log("User is here, time: " + ref.timeOnPage);
       } else {
         // if page is hidden
-        this.timeNotOnPage += 1;
-        console.log("User left, time: " + this.timeNotOnPage);
+        ref.timeNotOnPage += 1;
+        console.log("User left, time: " + ref.timeNotOnPage);
       }
     }, 1000);
     // listening for mouse moves
@@ -557,6 +558,18 @@ export default {
       var accelerationY = speedY / dt;
       var distanceX = Math.round(dx);
       var distanceY = Math.round(dy);
+
+      // on critical area
+      if (
+        e.pageX >= docsOffset.left &&
+        e.pageX <= docsOffset.left + docsOffset.width &&
+        e.pageY >= docsOffset.top &&
+        e.pageY <= docsOffset.top + docsOffset.height
+      ) {
+        ref.onCriticalArea[now] = true;
+      } else {
+        ref.onCriticalArea[now] = false;
+      }
 
       if (ref.counter > 3) {
         // 3 vector AC
@@ -676,7 +689,6 @@ export default {
 
     // Appending received data in formData object and sending ajax
     setInterval(() => {
-      console.log(ref.angularCharacteristics);
       let speed_of_clicks_r = ref.timeOnPage
         ? ref.countClicks.clickRight / ref.timeOnPage
         : 0;
@@ -702,18 +714,29 @@ export default {
 
       ref.formData.append("time_on_page", ref.timeOnPage);
       ref.formData.append("time_not_on_page", ref.timeNotOnPage);
+
       ref.formData.append("speeds_of_mouse", JSON.stringify(ref.mouseSpeeds));
       ref.formData.append("dists_of_mouse", JSON.stringify(ref.mouseDists));
-      ref.formData.append("accelerations_of_mouse", JSON.stringify(ref.mouseAccelerations));
+      ref.formData.append(
+        "accelerations_of_mouse",
+        JSON.stringify(ref.mouseAccelerations)
+      );
       ref.formData.append(
         "angular_characteristics",
         JSON.stringify(ref.angularCharacteristics)
       );
-      ref.formData.append("curvature_distances", JSON.stringify(ref.curvatureDistances));
+      ref.formData.append(
+        "curvature_distances",
+        JSON.stringify(ref.curvatureDistances)
+      );
+      ref.formData.append(
+        "on_critical_area",
+        JSON.stringify(ref.onCriticalArea)
+      );
 
       axios({
         method: "POST",
-        url: "https://192.168.0.16:5000/",
+        url: "https://192.168.0.17:5000/",
         data: ref.formData,
         headers: {
           "content-type": "multipart/form-data;",

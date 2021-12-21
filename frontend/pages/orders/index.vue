@@ -172,6 +172,43 @@
             </tbody>
           </table>
         </div>
+        <div class="bg-white rounded">
+          <table class="text-center w-full">
+            <thead>
+              <tr>
+                <th
+                  class="py-2 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark"
+                >
+                  Date
+                </th>
+                <th
+                  class="py-1 px-6 bg-grey-lightest font-bold uppercase text-sm text-grey-dark"
+                >
+                  Car
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-grey-lighter">
+                <td class="px-6 py-4 whitespace-nowrap">
+                  <div class="items-center">
+                    <div class="">
+                      <div class="text-sm font-medium text-purple-900">
+                        12:50
+                      </div>
+                      <div class="text-sm text-gray-600">30 August</div>
+                    </div>
+                  </div>
+                </td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <div class="text-indigo-600 hover:text-indigo-900">
+                    Kia Rio
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </div>
@@ -191,7 +228,7 @@ export default {
       {
         id: "#996521",
         time: "12:50",
-        date: "30 august",
+        date: "30 August",
         service: "Comfort",
         status: "Complited",
         address: "Moscow, Kaluzhskaya street, 8",
@@ -199,102 +236,102 @@ export default {
       },
       {
         id: "#996520",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:47",
+        date: "30 August",
         service: "Comfort",
         status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        address: "Moscow, New Arbat, 17",
+        car: "BMW X3",
       },
       {
         id: "#996519",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:47",
+        date: "30 August",
         service: "Comfort",
-        status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        status: "Complited",
+        address: "Moscow, Pushkinskaya street, 2A",
+        car: "Hyundai Solaris",
       },
       {
         id: "#996518",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:32",
+        date: "30 August",
         service: "Comfort",
         status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        address: "Moscow, Pervomaiskaya street",
+        car: "Hyundai Santa Fe",
       },
       {
         id: "#996517",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:30",
+        date: "30 August",
         service: "Comfort",
         status: "Active",
         address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        car: "Kia Sorento",
       },
       {
         id: "#996516",
-        time: "12:50",
-        date: "30 августа",
-        service: "Comfort",
+        time: "12:30",
+        date: "30 August",
+        service: "Luxe",
         status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        address: "Moscow, Arbat, 6",
+        car: "BMW X5M",
       },
       {
         id: "#996515",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:29",
+        date: "30 August",
         service: "Comfort",
-        status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        status: "Completed",
+        address: "Moscow, Kaluzhskaya street, 11",
+        car: "Kia Picanto",
       },
       {
         id: "#996514",
-        time: "12:50",
-        date: "30 августа",
-        service: "Comfort",
-        status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        time: "12:28",
+        date: "30 August",
+        service: "Luxe",
+        status: "Completed",
+        address: "Moscow, New Arbat, 8",
+        car: "Mercedes E63",
       },
       {
         id: "#996513",
-        time: "12:50",
-        date: "30 августа",
-        service: "Comfort",
+        time: "12:28",
+        date: "30 August",
+        service: "Luxe",
         status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        address: "Moscow, Petrovka street, 2",
+        car: "Bentley Bentayga",
       },
       {
         id: "#996512",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:27",
+        date: "30 August",
         service: "Comfort",
-        status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
+        status: "Completed",
+        address: "Moscow, Vernadsky prospect, 7",
         car: "Kia Rio",
       },
       {
         id: "#996511",
-        time: "12:50",
-        date: "30 августа",
+        time: "12:26",
+        date: "30 August",
         service: "Comfort",
         status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        address: "Moscow, New Arbat, 9",
+        car: "BMW X3",
       },
       {
         id: "#996510",
-        time: "12:50",
-        date: "30 августа",
-        service: "Comfort",
+        time: "12:26",
+        date: "30 August",
+        service: "Luxe",
         status: "Active",
-        address: "Moscow, Kaluzhskaya street, 8",
-        car: "Kia Rio",
+        address: "Moscow, Arbat, 11B",
+        car: "Mercedes S63AMG",
       },
     ],
     order_headers: ["№", "Date", "Service", "Status", "From", "Car"],
