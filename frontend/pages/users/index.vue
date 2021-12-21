@@ -483,6 +483,7 @@ export default {
       clickMiddle: 0,
     },
     mouseSpeeds: {}, // object of mouse speeds
+    mouseDists: {}, // object of mouse dists
     mouseAccelerations: {}, // object of mouse accelerations
     angularCharacteristics: {}, // object of angular characteristics
     timeForMeasure: 10, // every 10 secs ajax request on server with data
@@ -498,7 +499,7 @@ export default {
     setGet: function (slug) {
       axios({
         method: "GET",
-        url: "https://192.168.0.17:5000/",
+        url: "https://192.168.0.16:5000/",
         params: {
           slug: slug,
         },
@@ -554,6 +555,8 @@ export default {
       var accelerationX = speedX / dt;
       var speedY = Math.round((dy / dt) * 100);
       var accelerationY = speedY / dt;
+      var distanceX = Math.round(dx);
+      var distanceY = Math.round(dy);
 
       if (ref.counter > 3) {
         // 3 vector AC
@@ -643,6 +646,10 @@ export default {
         speedX: Math.abs(speedX),
         speedY: Math.abs(speedY),
       };
+      ref.mouseDists[now] = {
+        distanceX: Math.abs(distanceX),
+        distanceY: Math.abs(distanceY),
+      };
       ref.lastMouseTime = now;
       ref.lastMouseX = e.pageX;
       ref.lastMouseY = e.pageY;
@@ -695,17 +702,18 @@ export default {
 
       ref.formData.append("time_on_page", ref.timeOnPage);
       ref.formData.append("time_not_on_page", ref.timeNotOnPage);
-      ref.formData.append("speeds_of_mouse", ref.mouseSpeeds);
-      ref.formData.append("accelerations_of_mouse", ref.mouseAccelerations);
+      ref.formData.append("speeds_of_mouse", JSON.stringify(ref.mouseSpeeds));
+      ref.formData.append("dists_of_mouse", JSON.stringify(ref.mouseDists));
+      ref.formData.append("accelerations_of_mouse", JSON.stringify(ref.mouseAccelerations));
       ref.formData.append(
         "angular_characteristics",
-        ref.angularCharacteristics
+        JSON.stringify(ref.angularCharacteristics)
       );
-      ref.formData.append("curvature_distances", ref.curvatureDistances);
+      ref.formData.append("curvature_distances", JSON.stringify(ref.curvatureDistances));
 
       axios({
         method: "POST",
-        url: "https://192.168.0.17:5000/",
+        url: "https://192.168.0.16:5000/",
         data: ref.formData,
         headers: {
           "content-type": "multipart/form-data;",
@@ -716,6 +724,7 @@ export default {
           ref.formData = new FormData();
           ref.mouseAccelerations = {};
           ref.mouseSpeeds = {};
+          ref.mouseDists = {};
           ref.angularCharacteristics = {};
           ref.curvatureDistances = {};
           ref.timeNotOnPage = 0;

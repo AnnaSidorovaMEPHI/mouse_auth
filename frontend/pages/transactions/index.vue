@@ -298,7 +298,7 @@ export default {
     setGet: function (slug) {
       axios({
         method: "GET",
-        url: "https://192.168.0.17:5000/",
+        url: "https://192.168.0.16:5000/",
         params: {
           slug: slug,
         },
