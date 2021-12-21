@@ -491,12 +491,12 @@ export default {
     onCriticalArea: {}, // object of critical area
   }),
   methods: {
-    setGet: function (slug) {
+    setGet: function (data) {
       axios({
         method: "GET",
         url: "https://192.168.0.16:5000/",
         params: {
-          slug: slug,
+          data: data,
         },
       })
         .then((response) => console.log(response))
